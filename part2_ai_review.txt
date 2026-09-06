@@ -1,0 +1,98 @@
+PART 2: IMPROVE WORKING CODE WITH AI
+
+Practice Exercise Chosen:
+Grade Analyzer
+
+
+1. QUESTION ASKED:
+"How can I make this code more Pythonic?"
+
+AI Suggestion:
+Use built-in Python functions such as sum(), len(), max(), and min() instead of manually calculating values when the assignment allows it.
+
+Evaluation:
+The suggestion is easy to understand, makes the code shorter, and uses standard Python features. It does not introduce unnecessary complexity.
+
+Decision:
+Implement.
+
+Reason:
+These built-in functions make the code easier to read and maintain.
+
+Verification:
+I ran the program after the changes and verified that the totals, average, highest score, and lowest score were still calculated correctly.
+
+
+2. QUESTION ASKED:
+"What edge cases am I not handling?"
+
+AI Suggestion:
+Handle an empty list of scores before calculating the average or using max() and min().
+
+Evaluation:
+This is useful because dividing by len(scores) when the list is empty would cause an error. max() and min() would also fail on an empty list.
+
+Decision:
+Implement.
+
+Reason:
+Handling an empty list makes the program more reliable and prevents runtime errors.
+
+Verification:
+I tested the program with an empty list. Instead of crashing, the program now displays a message saying that no scores are available.
+
+
+AI Suggestion:
+Check that all scores are valid numbers.
+
+Evaluation:
+This is helpful because a value such as "70" stored as a string could cause calculations to fail.
+
+Decision:
+Implement.
+
+Reason:
+The program should not assume that every value is automatically the correct data type.
+
+Verification:
+I tested the program with valid numeric scores and confirmed it still worked correctly.
+
+
+3. QUESTION ASKED:
+"Are there any security or reliability concerns?"
+
+AI Suggestion:
+Avoid using eval() to convert or process score input.
+
+Evaluation:
+This is an important security recommendation because eval() can execute Python code supplied by a user.
+
+Decision:
+Implement / Follow this recommendation.
+
+Reason:
+The program does not need eval(). Safer conversions such as int() or float() should be used instead.
+
+Verification:
+The program works without using eval().
+
+
+AI Suggestion:
+Use try/except when converting user-provided values into numbers.
+
+Evaluation:
+This would make the program more reliable if the scores eventually come from user input or a file containing invalid data.
+
+Decision:
+Implement.
+
+Reason:
+It prevents the entire program from crashing when invalid data is entered.
+
+Verification:
+I tested valid and invalid values and confirmed that invalid values can be handled without stopping the program.
+
+
+FINAL RESULT:
+
+The AI suggestions I chose to implement improved readability, reliability, and safety without making the program unnecessarily complicated. I reviewed the suggestions before using them and verified that the program still worked after the changes.
