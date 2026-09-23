@@ -1,0 +1,45 @@
+Validation Results
+
+Program execution succeeded.
+
+Terminal output:
+Loading student data...
+  Loaded 15 students.
+
+Generating report...
+
+--- Summary ---
+Total students:   15
+Class average:    79.4
+Highest average:  95.2
+Lowest average:   58.2
+
+Grade Distribution:
+  A: 3
+  B: 4
+  C: 5
+  D: 2
+  F: 1
+  N/A: 0
+
+Top 5 students:
+  Eve Williams         95.2  (A)
+  Noah Garcia          93.0  (A)
+  Alice Johnson        91.5  (A)
+  Jack Taylor          89.0  (B)
+  Grace Lee            86.8  (B)
+
+Report written to grade_report.txt
+
+
+Automated checks passed:
+calculate_average with complete grades
+calculate_average with all grades missing
+letter grade boundaries
+provided CSV loads 15 students
+class average equals 79.4 from the supplied data
+highest average equals 95.2
+lowest average equals 58.2
+grade distribution equals A 3, B 4, C 5, D 2, F 1, N/A 0
+student with no valid grades receives N/A
+missing file returns an empty list without crashing

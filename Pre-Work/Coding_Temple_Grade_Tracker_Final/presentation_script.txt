@@ -1,0 +1,39 @@
+5 Minute Presentation Script
+
+Opening
+
+This project is a command line student grade tracker built with Python. It reads student data from a CSV file, calculates student and class statistics, handles missing grades, and writes a full report to a text file. It uses only Python's built in csv module.
+
+1. Show the code and explain one function
+
+I will focus on calculate_average.
+
+The function receives a list of grade values. I create an empty list called valid_grades. Then I loop through every grade. If a value is missing or is an empty string, I skip it. For any remaining value, I try to convert it to a float. If conversion succeeds, I add it to valid_grades. If there are no valid grades after the loop, the function returns None. Otherwise, it adds the valid grades, divides by the number of valid grades, and rounds the result to one decimal place.
+
+This keeps the average logic separate and reusable because generate_report can call it for every student.
+
+2. Debugging example
+
+One issue I had to account for was missing values in the CSV. A row such as Bob Smith contains an empty English grade. Trying to convert an empty string directly with float would cause a ValueError. I fixed that by checking whether the value is empty before converting it. I also used a try and except block so an unexpected non numeric value would not crash the program.
+
+Another verification step was comparing the program's calculations against the sample output. The supplied CSV data produces a class average of 79.4 with 4 B grades and 5 C grades. The sample output says 80.1 with 5 B grades and 4 C grades. I verified the individual averages from the actual CSV and kept the calculations based on the provided data rather than hard coding the sample values.
+
+3. Demo the program
+
+From the project folder I run:
+
+python3 grade_tracker.py
+
+The program loads 15 students, generates the report, prints the class summary and grade distribution, displays the top five students, and confirms that grade_report.txt was written.
+
+4. Show the output file
+
+The grade_report.txt file contains the class summary, grade distribution, and every student's numeric average and letter grade. It is formatted so the results are easy to scan.
+
+5. Explain requirements.txt
+
+The requirements.txt file has no external dependencies because the program only uses Python's built in csv module. There is nothing that needs to be installed with pip.
+
+Closing
+
+The project demonstrates file input and output, lists, dictionaries, loops, conditionals, functions, exception handling, CSV processing, sorting, and formatted output in one application.
